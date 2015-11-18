@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :carts
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
   root to: "store#index", as: "store"
