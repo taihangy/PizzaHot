@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Depot</title>
+  <title>Pizza Hot</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body class='<%= controller.controller_name %>'>
 	<div id="banner">
-		<%= image_tag("logo.png") %>
-		<%= @page_title || "Pragmatic Bookshelf" %>
+		<%= image_tag("logo.png", width: "119", height: "33") %>
+		<%= @page_title || "Pizza Hot" %>
 	</div>
 	<div id="columns">
 		<div id="side"> 
@@ -21,9 +21,11 @@
 
 			<ul>
 				<li><a href="http://www....">Home</a></li>
-				<li><a href="http://www..../faq">Questions</a></li> 
-				<li><a href="http://www..../news">News</a></li> 
+				<li><a href="http://www..../menu">Menu</a></li> 
+				<li><a href="http://www..../special">Special</a></li> 
 				<li><a href="http://www..../contact">Contact</a></li>
+				<li><a href="http://www..../about">About</a></li>
+				<li><a href="http://www..../myorder">MyOrder</a></li>
 			</ul>
 			<p><%= Time.now %></p> 
 		</div>

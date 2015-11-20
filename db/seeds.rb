@@ -8,38 +8,27 @@
 #---
 # encoding: utf-8
 Product.delete_all
-Product.create!(title: 'CoffeeScript',
+Product.create!(title: 'Pizza1',
   description: 
     %{<p>
-        CoffeeScript is JavaScript done right. It provides all of JavaScript's
-	functionality wrapped in a cleaner, more succinct syntax. In the first
-	book on this exciting new language, CoffeeScript guru Trevor Burnham
-	shows you how to hold onto all the power and flexibility of JavaScript
-	while writing clearer, cleaner, and safer code.
+        Pizza1 is great.
       </p>},
-  image_url:   'cs.jpg',    
-  price: 36.00)
+  image_url:   'dish6.jpg',    
+  price: 6.00)
 # . . .
-Product.create!(title: 'Programming Ruby 1.9',
+Product.create!(title: 'Pizza2',
   description:
     %{<p>
-        Ruby is the fastest growing and most exciting dynamic language
-        out there. If you need to get working programs delivered fast,
-        you should add Ruby to your toolbox.
+        Pizza1 is great.
       </p>},
-  image_url: 'ruby.jpg',
-  price: 49.95)
+  image_url: 'menu2.jpg',
+  price: 9.95)
 # . . .
 
-Product.create!(title: 'Rails Test Prescriptions',
+Product.create!(title: 'Pizza3',
   description: 
     %{<p>
-        <em>Rails Test Prescriptions</em> is a comprehensive guide to testing
-        Rails applications, covering Test-Driven Development from both a
-        theoretical perspective (why to test) and from a practical perspective
-        (how to test effectively). It covers the core Rails testing tools and
-        procedures for Rails 2 and Rails 3, and introduces popular add-ons,
-        including Cucumber, Shoulda, Machinist, Mocha, and Rcov.
+        Pizza1 is great.
       </p>},
-  image_url: 'rtp.jpg',
-  price: 34.95)
+  image_url: 'menu5.jpg',
+  price: 4.95)
