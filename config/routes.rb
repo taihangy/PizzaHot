@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :orders
   resources :line_items
   resources :carts
   # You can have the root of your site routed with "root"
