@@ -1,6 +1,6 @@
 class OrdersController < ApplicationController
   before_action :set_order, only: [:show, :edit, :update, :destroy]
-
+  
   # GET /orders
   # GET /orders.json
   def index
@@ -15,7 +15,7 @@ class OrdersController < ApplicationController
   # GET /orders/new
   def new
     @cart = current_cart
-    if @cart.line_items.empty?
+    if @cart.line_items.count == 0
       redirect_to store_url, notice: "Your cart is empty"
       return
     end
