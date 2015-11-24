@@ -13,7 +13,7 @@ Product.create!(title: 'Pizza1',
     %{<p>
         Pizza1 is great.
       </p>},
-  image_url:   'dish6.jpg',    
+  image_url:   'dish/dish12.jpg',    
   price: 6.00)
 # . . .
 Product.create!(title: 'Pizza2',
@@ -21,7 +21,7 @@ Product.create!(title: 'Pizza2',
     %{<p>
         Pizza1 is great.
       </p>},
-  image_url: 'menu2.jpg',
+  image_url: 'dish/dish12.jpg',
   price: 9.95)
 # . . .
 
@@ -30,5 +30,5 @@ Product.create!(title: 'Pizza3',
     %{<p>
         Pizza1 is great.
       </p>},
-  image_url: 'menu5.jpg',
+  image_url: 'dish/dish12.jpg',
   price: 4.95)
