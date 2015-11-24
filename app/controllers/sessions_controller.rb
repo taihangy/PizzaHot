@@ -2,6 +2,7 @@ class SessionsController < ApplicationController
   skip_before_filter :authorize
   def new
   	@user = User.new
+    render layout: false
   end
 
   def create
