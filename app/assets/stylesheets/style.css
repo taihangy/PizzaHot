@@ -14,7 +14,7 @@ Designed by : http://responsivewebinc.com
  */
 
 body{
-	background: #fff url('images/crossword.png') repeat;
+	background: #fff url('crossword.png') repeat;
 	font-family: 'Open Sans', sans-serif;
 	-webkit-font-smoothing: antialiased;
 }
