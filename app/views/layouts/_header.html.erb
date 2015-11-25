@@ -6,13 +6,17 @@
 		<div class="header-top">
 			<div class="row">
 				<div class="col-md-4 col-sm-4">
-					<div class="sign">
-						<a href="register.html" class="btn btn-danger btn-sm">Sign Up</a>
-
-					</div>
-					<div class="sign">
-						<%= button_to "Admin Login", login_path, method: :post, class: "btn btn-default btn-sm" %>
-					</div>
+					<% if session[:cart_id] %>
+						<%  if session[:user_id] %>
+							<div class="sign">
+								<%= button_to "Logout", logout_path, method: :delete, class: "btn btn-danger btn-sm" %>
+							</div>
+						<% else %>
+							<div class="sign">
+								<%= button_to "Admin Login", login_path, method: :post, class: "btn btn-default btn-sm" %>
+							</div>
+						<% end %>
+					<% end %>
 				</div>
 
 				<div class="col-md-4 col-sm-4">

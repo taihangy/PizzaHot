@@ -228,96 +228,30 @@
 				<div class="border"></div>
 			</div>
 			<div class="row">
-				<div class="col-md-6 col-sm-6">
-					<!-- Pricing list Item -->
-					<div class="pricing-item">
-						<!-- Image -->
-						<a href="item-single.html"><img class="img-responsive img-thumbnail" src="/assets/dish/dish3.jpg" alt="" /></a>
-						<!-- Pricing item details -->
-						<div class="pricing-item-details">
-							<!-- Heading -->
-							<h3><a href="item-single.html">Fried Rice</a></h3>
-							<!-- Paragraph -->
-							<p>From Jone's at College Town<br>
-								Vegetables, chicken and beef.
-							</p>
-							<!-- Buy link -->
-							<a class="btn btn-danger pull-right" href="item-single.html">Order now</a>
+				<% @products.each do |product| %>
+					<div class="col-md-6 col-sm-6">
+						<!-- Pricing list Item -->
+						<div class="pricing-item">
+							<!-- Image -->
+							<%= image_tag(product.image_url, class: "img-responsive img-thumbnail") %> 
+							<!-- Pricing item details -->
+							<div class="pricing-item-details">
+								<!-- Heading -->
+								<h3><%= product.title %></h3>
+								<!-- Paragraph -->
+								<p><%= sanitize(product.description) %>
+								</p>
+								<!-- Buy link -->
+								<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-danger pull-right" %>
+								<div class="clearfix"></div>
+							</div>
+							<!-- Tag -->
+							<span class="hot-tag br-red"><%= number_to_currency(product.price) %></span>
 							<div class="clearfix"></div>
 						</div>
-						<!-- Tag -->
-						<span class="hot-tag br-red">$9.5</span>
-						<div class="clearfix"></div>
 					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<!-- Pricing list Item -->
-					<div class="pricing-item">
-						<!-- Image -->
-						<a href="item-single.html"><img class="img-responsive img-thumbnail" src="/assets/dish/dish2.jpg" alt="" /></a>
-						<!-- Pricing item details -->
-						<div class="pricing-item-details">
-							<!-- Heading -->
-							<h3><a href="item-single.html">Spicy Chicken</a></h3>
-							<!-- Paragraph -->
-							<p>From Andrew's at Ithaca Mall.<br>
-								Special Maxico spicy chicken. Big deal now!
-							</p>
-							<!-- Buy link -->
-							<a class="btn btn-danger pull-right" href="item-single.html">Order now</a>
-							<div class="clearfix"></div>
-						</div>
-						<!-- Tag -->
-						<span class="hot-tag br-lblue">$11</span>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<div class="clearfix visible-md"></div>
-				<div class="col-md-6 col-sm-6">
-					<!-- Pricing list Item -->
-					<div class="pricing-item">
-						<!-- Image -->
-						<a href="item-single.html"><img class="img-responsive img-thumbnail" src="/assets/dish/dish4.jpg" alt="" /></a>
-						<!-- Pricing item details -->
-						<div class="pricing-item-details">
-							<!-- Heading -->
-							<h3><a href="item-single.html">Chinese Chicken</a></h3>
-							<!-- Paragraph -->
-							<p>From Spicy Chinese at Southern Ithaca.<br>
-								Deliver fast and taste good.
-							</p>
-							<!-- Buy link -->
-							<a class="btn btn-danger pull-right" href="item-single.html">Order now</a>
-							<div class="clearfix"></div>
-						</div>
-						<!-- Tag -->
-						<span class="hot-tag br-green">$15</span>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-				<div class="col-md-6 col-sm-6">
-					<!-- Pricing list Item -->
-					<div class="pricing-item">
-						<!-- Image -->
-						<a href="item-single.html"><img class="img-responsive img-thumbnail" src="/assets/dish/dish1.jpg" alt="" /></a>
-						<!-- Pricing item details -->
-						<div class="pricing-item-details">
-							<!-- Heading -->
-							<h3><a href="item-single.html">Sushi</a></h3>
-							<!-- Paragraph -->
-							<p>From Plumtree at College town.<br>
-								You will always find a dish you like here.
-							</p>
-							<!-- Buy link -->
-							<a class="btn btn-danger pull-right" href="item-single.html">Order now</a>
-							<div class="clearfix"></div>
-						</div>
-						<!-- Tag -->
-						<span class="hot-tag br-red">$19</span>
-						<div class="clearfix"></div>
-					</div>
-				</div>
-			</div>
+				<% end %>
+				<!-- <div class="clearfix visible-md"></div> -->
 		</div>
 	</div>
 	
