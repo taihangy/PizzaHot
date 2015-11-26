@@ -239,8 +239,7 @@
 								<!-- Heading -->
 								<h3><%= product.title %></h3>
 								<!-- Paragraph -->
-								<p><%= sanitize(product.description) %>
-								</p>
+								<p><%= sanitize(product.description) %></p>
 								<!-- Buy link -->
 								<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-danger pull-right" %>
 								<div class="clearfix"></div>
