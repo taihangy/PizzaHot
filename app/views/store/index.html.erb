@@ -239,9 +239,9 @@
 								<!-- Heading -->
 								<h3><%= product.title %></h3>
 								<!-- Paragraph -->
-								<p><%= sanitize(product.description) %></p>
+								<p style="margin-bottom: 15px"><%= sanitize(product.description) %></p>
 								<!-- Buy link -->
-								<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-danger pull-right" %>
+								<%= button_to 'Add to Cart', line_items_path(product_id: product.id), class: "btn btn-danger" %>
 								<div class="clearfix"></div>
 							</div>
 							<!-- Tag -->

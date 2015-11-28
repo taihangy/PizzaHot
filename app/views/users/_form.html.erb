@@ -1,9 +1,7 @@
-<div class="pizza_form">
   <%= form_for(@user) do |f| %>
     <% if @user.errors.any? %>
       <div id="error_explanation">
-        <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
-
+        <h1><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h1>
         <ul>
         <% @user.errors.full_messages.each do |message| %>
           <li><%= message %></li>
@@ -13,9 +11,9 @@
     <% end %>
 
     <fieldset>
-      <legend>Enter User Details</legend>
+      <h1>Enter Detailed Information of New User</h1>
       <div class="field">
-        <%= f.label :name %><br>
+        <%= f.label :name, "Name" %><br>
         <%= f.text_field :name, size: 40 %>
       </div>
       <div class="field">
@@ -27,8 +25,10 @@
         <%= f.password_field :password_confirmation, size: 40 %>
       </div>
       <div class="actions">
-        <%= f.submit "Sign up"%>
+        <%= f.submit "Sign up", class: "btn btn-danger btn-sm"%>
+        <%= link_to 'Back', users_path, class: "btn btn-default btn-sm"%>
       </div>
     </fieldset>
   <% end %>  
-</div>
+
+			
