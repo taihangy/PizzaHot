@@ -29,6 +29,10 @@
         <%= f.label :price %><br>
         <%= f.text_field :price %>
       </div>
+      <div class="field">
+        <%= f.label :catagory %><br>
+        <%= f.select :catagory, Product::PRODUCT_TYPES, prompt: 'Select a product catagory', class: "form-control" %>
+      </div>
       <div class="actions">
         <%= f.submit "Submit", class: "btn btn-danger btn-sm"%>&nbsp;&nbsp;&nbsp;&nbsp;
         <%= link_to 'Back', products_path, class: "btn btn-default btn-sm"%>

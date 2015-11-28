@@ -13,7 +13,8 @@ Product.create!(title: 'Pizza1',
     %{<p>
         Pizza1 is great.
       </p>},
-  image_url:   'dish/dish12.jpg',    
+  image_url:   'dish/dish12.jpg',  
+  catagory: "Pizza", 
   price: 6.00)
 # . . .
 Product.create!(title: 'Pizza2',
@@ -22,13 +23,42 @@ Product.create!(title: 'Pizza2',
         Pizza1 is great.
       </p>},
   image_url: 'dish/dish12.jpg',
+  catagory: "Pizza", 
   price: 9.95)
 # . . .
 
-Product.create!(title: 'Pizza3',
+Product.create!(title: 'Burge1',
   description: 
     %{<p>
-        Pizza1 is great.
+        Burge1 is great.
       </p>},
-  image_url: 'dish/dish12.jpg',
+  image_url: 'dish/dish11.jpg',
+  catagory: "Burge", 
   price: 4.95)
+
+Product.create!(title: 'Burge2',
+  description: 
+    %{<p>
+        Burge2 is great.
+      </p>},
+  image_url: 'dish/dish11.jpg',
+  catagory: "Burge", 
+  price: 5.95)
+
+Product.create!(title: 'Dessert1',
+  description: 
+    %{<p>
+        Dessert1 is great.
+      </p>},
+  image_url: 'dish/dish14.jpg',
+  catagory: "Dessert", 
+  price: 2.95)
+
+Product.create!(title: 'Dessert2',
+  description: 
+    %{<p>
+        Dessert2 is great.
+      </p>},
+  image_url: 'dish/dish16.jpg',
+  catagory: "Dessert", 
+  price: 3.95)
