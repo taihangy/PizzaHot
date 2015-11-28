@@ -38,7 +38,8 @@
 										<li>
 											<div class="menu-list-item">
 												<!-- Icon -->
-												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<i class="fa fa-angle-right"></i> 
+												<%= link_to product do %> <%= product.title%> <% end %>
 												<!-- Price badge -->
 												<span class="pull-right"><%= product.price %></span>
 												<div class="clearfix"></div>
@@ -68,7 +69,8 @@
 										<li>
 											<div class="menu-list-item">
 												<!-- Icon -->
-												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<i class="fa fa-angle-right"></i> 
+												<%= link_to product do %> <%= product.title%> <% end %>
 												<!-- Price badge -->
 												<span class="pull-right"><%= product.price %></span>
 												<div class="clearfix"></div>
@@ -98,7 +100,8 @@
 										<li>
 											<div class="menu-list-item">
 												<!-- Icon -->
-												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<i class="fa fa-angle-right"></i> 
+												<%= link_to product do %> <%= product.title%> <% end %>
 												<!-- Price badge -->
 												<span class="pull-right"><%= product.price %></span>
 												<div class="clearfix"></div>
@@ -141,7 +144,7 @@
 							<!-- Pricing item details -->
 							<div class="pricing-item-details">
 								<!-- Heading -->
-								<h3><%= product.title %></h3>
+								<h3><%= link_to product do %> <%= product.title%> <% end %></h3>
 								<!-- Paragraph -->
 								<p style="margin-bottom: 15px"><%= sanitize(product.description) %></p>
 								<!-- Buy link -->
