@@ -10,7 +10,7 @@
 				<!-- Crown image -->
 				<img class="img-responsive" src="/assets/crown.png" alt="" />
 				<!-- Heading -->
-				<h2>Popular Restaurants</h2>
+				<h2>Menu</h2>
 				<!-- Paragraph -->
 				<p>A list of most popular dishes.</p>
 				<!-- Border -->
@@ -23,9 +23,9 @@
 						<!-- Menu header -->
 						<div class="menu-head">
 							<!-- Image for menu item -->
-							<img class="menu-img img-responsive img-thumbnail" src="/assets/menu/menu1.jpg" alt="" />
+							<img class="menu-img img-responsive img-thumbnail" src="/assets/menu/menu5.jpg" alt="" />
 							<!-- Menu title / Heading -->
-							<h3>Hottest</h3>
+							<h3>Pizza</h3>
 							<!-- Border for above heading -->
 							<div class="title-border br-red"></div>
 						</div>
@@ -33,51 +33,19 @@
 						<div class="menu-details br-red">
 							<!-- Menu list -->
 							<ul class="list-unstyled">
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">First</a>
-										<!-- Price badge -->
-										<span class="pull-right">8.7</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Second</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.2</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Third</a>
-										<!-- Price badge -->
-										<span class="pull-right">7.7</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fourth</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.5</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fifth</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.3</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
+								<% @products.each do |product| %>
+									<% if product.catagory == "Pizza"%>
+										<li>
+											<div class="menu-list-item">
+												<!-- Icon -->
+												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<!-- Price badge -->
+												<span class="pull-right"><%= product.price %></span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+									<% end %>
+								<% end %>
 							</ul>
 						</div><!-- / Menu details end -->
 					</div>
@@ -87,7 +55,7 @@
 							<!-- Image for menu item -->
 							<img class="menu-img img-responsive img-thumbnail" src="/assets/menu/menu2.jpg" alt="" />
 							<!-- Menu title / Heading -->
-							<h3>Highest</h3>
+							<h3>Burge</h3>
 							<!-- Border for above heading -->
 							<div class="title-border br-green"></div>
 						</div>
@@ -95,51 +63,19 @@
 						<div class="menu-details br-green">
 							<!-- Menu list -->
 							<ul class="list-unstyled">
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">First</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.8</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Second</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.6</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Third</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.5</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fourth</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.3</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fifth</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.2</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
+								<% @products.each do |product| %>
+									<% if product.catagory == "Burge"%>
+										<li>
+											<div class="menu-list-item">
+												<!-- Icon -->
+												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<!-- Price badge -->
+												<span class="pull-right"><%= product.price %></span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+									<% end %>
+								<% end %>
 							</ul>
 						</div><!-- / Menu details end -->
 					</div>
@@ -149,7 +85,7 @@
 							<!-- Image for menu item -->
 							<img class="menu-img img-responsive img-thumbnail" src="/assets/menu/menu3.jpg" alt="" />
 							<!-- Menu title / Heading -->
-							<h3>Newest</h3>
+							<h3>Dessert</h3>
 							<!-- Border for above heading -->
 							<div class="title-border br-lblue"></div>
 						</div>
@@ -157,51 +93,19 @@
 						<div class="menu-details br-lblue">
 							<!-- Menu list -->
 							<ul class="list-unstyled">
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">First</a>
-										<!-- Price badge -->
-										<span class="pull-right">9.1</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Second</a>
-										<!-- Price badge -->
-										<span class="pull-right">8.3</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Third</a>
-										<!-- Price badge -->
-										<span class="pull-right">8.6</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fourth</a>
-										<!-- Price badge -->
-										<span class="pull-right">7.4</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
-								<li>
-									<div class="menu-list-item">
-										<!-- Icon -->
-										<i class="fa fa-angle-right"></i> <a href="menu.html">Fifth</a>
-										<!-- Price badge -->
-										<span class="pull-right">8.0</span>
-										<div class="clearfix"></div>
-									</div>
-								</li>
+								<% @products.each do |product| %>
+									<% if product.catagory == "Dessert"%>
+										<li>
+											<div class="menu-list-item">
+												<!-- Icon -->
+												<i class="fa fa-angle-right"></i> <a href="menu.html"><%= product.title %></a>
+												<!-- Price badge -->
+												<span class="pull-right"><%= product.price %></span>
+												<div class="clearfix"></div>
+											</div>
+										</li>
+									<% end %>
+								<% end %>
 							</ul>
 						</div><!-- / Menu details end -->
 					</div>
