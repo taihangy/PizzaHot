@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'contact/new'
+
+  get 'contact/show'
+
+  get 'contact/edit'
+
   get 'admin' => "admin#index"
 
   controller :sessions do 
