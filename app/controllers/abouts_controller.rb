@@ -1,4 +1,4 @@
-class AboutController < ApplicationController
+class AboutsController < ApplicationController
 	skip_before_filter :authorize
   def new
   end

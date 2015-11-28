@@ -150,6 +150,11 @@
 										<%= image_tag("nav-menu/nav1.jpg", class: "img-responsive") %>User
 									<% end %>
 								</li>
+								<li>
+									<%= link_to contacts_path do %>
+										<%= image_tag("nav-menu/nav1.jpg", class: "img-responsive") %>Feedback
+									<% end %>
+								</li>
 								<% else %>
 								<li class="dropdown hidden-xs">
 									<a href="#" class="dropdown-toggle" data-toggle="dropdown"><img src="/assets/nav-menu/nav2.jpg" class="img-responsive" alt="" /> Menu <b class="caret"></b></a>
@@ -220,12 +225,12 @@
 									</ul>
 								</li>
 								<li class="dropdown">
-									<%= link_to contact_show_path do %>
+									<%= link_to new_contact_path do %>
 										<%= image_tag("nav-menu/nav4.jpg", class: "img-responsive") %>Contact
 									<% end %>
 								</li>
 								<li>
-									<%= link_to about_show_path do %>
+									<%= link_to abouts_show_path do %>
 										<%= image_tag("nav-menu/nav5.jpg", class: "img-responsive") %>About
 									<% end %>
 								</li>

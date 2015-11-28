@@ -1,16 +1,10 @@
 Rails.application.routes.draw do
 
-  get 'about/new'
+  get 'abouts/new'
 
-  get 'about/show'
+  get 'abouts/show'
 
-  get 'about/edit'
-
-  get 'contact/new'
-
-  get 'contact/show'
-
-  get 'contact/edit'
+  get 'abouts/edit'
 
   get 'admin' => "admin#index"
 
@@ -19,7 +13,7 @@ Rails.application.routes.draw do
     post 'login' => :create
     delete 'logout' => :destroy
   end
-
+  resources :contacts
   resources :users
   resources :orders
   resources :line_items do
