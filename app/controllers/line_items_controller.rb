@@ -1,5 +1,5 @@
 class LineItemsController < ApplicationController
-  skip_before_filter :authorize, only: :create
+  skip_before_filter :authorize, only: [:create, :decrement, :increment]
   before_action :set_line_item, only: [:show, :edit, :update, :destroy]
 
   # GET /line_items
@@ -67,6 +67,38 @@ class LineItemsController < ApplicationController
     respond_to do |format|
       format.html { redirect_to line_items_url, notice: 'Line item was successfully destroyed.' }
       format.json { head :no_content }
+    end
+  end
+
+  def decrement
+    @cart = current_cart
+    @line_item = @cart.line_items.find_by_id(params[:id])
+
+    @line_item.decrement
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to @line_item.cart } 
+        format.json { head :ok }
+      else 
+        format.html { render action: "edit" }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }                         
+      end
+    end
+  end
+
+  def increment
+    @cart = current_cart
+    @line_item = @cart.line_items.find_by_id(params[:id])
+
+    @line_item.increment
+    respond_to do |format|
+      if @line_item.save
+        format.html { redirect_to @line_item.cart } 
+        format.json { head :ok }
+      else 
+        format.html { render action: "edit" }
+        format.json { render json: @line_item.errors, status: :unprocessable_entity }                         
+      end
     end
   end
 
