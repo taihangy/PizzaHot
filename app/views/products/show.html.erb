@@ -1,29 +1,51 @@
 <p id="notice"><%= notice %></p>
 
-<div class="main-content">
-
-  <div class="container">
-	<p>
-	  <strong>Title:</strong>
-	  <%= @product.title %>
-	</p>
-
-	<p>
-	  <strong>Description:</strong>
-	  <%= @product.description %>
-	</p>
-
-	<p>
-	  <strong>Image url:</strong>
-	  <%= @product.image_url %>
-	</p>
-
-	<p>
-	  <strong>Price:</strong>
-	  <%= @product.price %>
-	</p>
-
-	<%= link_to 'Edit', edit_product_path(@product) %> |
-	<%= link_to 'Back', products_path %>
-  </div>
+<div class="wrapper" >
+  	<!-- Banner Start -->
+	<div class="banner padd">
+		<div class="container">
+			<!-- Image -->
+			<img class="img-responsive" src="assets/crown-white.png" alt="" />
+			<!-- Heading -->
+			<h2 class="white">View Product</h2>
+			<ol class="breadcrumb">
+				<li>Home</li>
+				<li>Product</li>
+				<li class="active">View Product</li>
+			</ol>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+	<!-- Banner End -->
+		
+	<div class="container">
+		<div class="row">
+		  	<div class="col-md-3 col-sm-3"></div>
+			<div class="col-md-6 col-sm-6">
+  				<div class="table-responsive" style = "margin-top:40px">
+					<table class="table table-bordered">
+					<tbody>
+          				<tr>
+            				<td><strong>Title</strong></td>
+            				<td><%= @product.title %></td>
+            			</tr>
+            			<tr>
+            				<td><strong>Description</strong></td>
+            				<td><%= @product.description %></td>
+            			</tr>
+            			<tr>
+            				<td><strong>Image url</strong></td>
+            				<td><%= @product.image_url %></td>
+            			</tr>
+            			<tr>
+            				<td><strong>Price</strong></td>
+            				<td><%= @product.price %></td>
+            			</tr>
+					</tbody>
+				</table>
+    		</div>
+	    <div class="col-md-4 col-sm-4"></div>
+	    	<%= link_to 'Edit', edit_product_path(@product), class: "btn btn-danger btn-sm"%> &nbsp;&nbsp;&nbsp;&nbsp;
+			<%= link_to 'Back', products_path, class: "btn btn-default btn-sm"%>
+  	</div>
 </div>
