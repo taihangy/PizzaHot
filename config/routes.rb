@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
 
+  get 'about/new'
+
+  get 'about/show'
+
+  get 'about/edit'
+
   get 'contact/new'
 
   get 'contact/show'
