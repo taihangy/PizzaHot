@@ -17,4 +17,8 @@ class Order < ActiveRecord::Base
 			line.total_price
 		end
 	end
+
+	def ship
+		self.status = "shipped"
+	end
 end
