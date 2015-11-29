@@ -52,8 +52,9 @@ class OrdersController < ApplicationController
   # PATCH/PUT /orders/1.json
   def update
     @order.ship
+    OrderNotifier.shipped(@order).deliver_now
     respond_to do |format|
-      if @order.update(order_params)
+      if @order.save
         format.html { redirect_to orders_path, notice: 'Order was successfully shipped.' }
         format.json { render :show, status: :ok, location: @order }
       else
