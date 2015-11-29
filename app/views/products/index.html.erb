@@ -53,7 +53,7 @@
           			  <div class="tab-pane fade" id="profile">
   					        <ul class="media-list" style="margin-bottom: 20px">
                       <% @products.each do |product| %>
-                        <% if product.catagory == "Burge" %>
+                        <% if product.catagory == "Burger" %>
                           <li class="media" style = "margin-top: 20px">
                               <div class="media-left media-middle">
                                   <%= link_to image_tag(product.image_url, width: 200, class: 'media-object img-thumbnail'), products_path %> 
