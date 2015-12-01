@@ -27,7 +27,7 @@ Product.create!(title: 'Pizza2',
   price: 9.95)
 # . . .
 
-Product.create!(title: 'Burge1',
+Product.create!(title: 'Burger1',
   description: 
     %{<p>
         Burge1 is great.
@@ -36,7 +36,7 @@ Product.create!(title: 'Burge1',
   catagory: "Burge", 
   price: 4.95)
 
-Product.create!(title: 'Burge2',
+Product.create!(title: 'Burger2',
   description: 
     %{<p>
         Burge2 is great.
