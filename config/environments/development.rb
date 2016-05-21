@@ -50,7 +50,7 @@ Rails.application.configure do
     domain: "gmail.com", 
     authentication: "plain",
     user_name: "yetaihang.zju@gmail.com", 
-    password: "AIESECyth314159", 
+    password: "XXX", 
     enable_starttls_auto: true
   }
 end

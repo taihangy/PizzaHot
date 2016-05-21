@@ -68,8 +68,8 @@ class CartsController < ApplicationController
   def destroy
     @cart = current_cart
     @cart.destroy
-    reset_session
-    # session[:card_id] = nil
+    # reset_session
+    session[:card_id] = nil
     respond_to do |format|
       format.html { redirect_to store_url }
       format.json { head :no_content }
